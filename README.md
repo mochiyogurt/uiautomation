@@ -22,79 +22,78 @@ module.exports = (function(settings) {
 9.Create nightwatch.json file
 
 {
- "src_folders": ["tests"],
- "output_folder": "reports/XMLReports",
- "custom_commands_path":"pages",
- "custom_assertions_path": "",
- "page_objects_path": "pages",
- "launch_url": "http://www.artsyjewels.com",
- "webdriver" : {
-   "start_process": true
+  "src_folders": ["tests"],
+  "output_folder": "reports/XMLReports",
+  "custom_commands_path": "pages",
+  "custom_assertions_path": "",
+  "page_objects_path": "pages",
+  "launch_url": "http://www.artsyjewels.com",
+  "webdriver" : {
+    "start_process": true
   },
- "test_settings" : {
-     "firefox": {
-       "webdriver" : {
-          "server_path":"bin/geckodriver"
+  "test_settings" : {
+      "firefox": {
+        "webdriver" : {
+          "server_path": "bin/geckodriver"
           },
-         "screenshots": {
-           "enabled": true,
-           "path": "screenshots/Firefox/"
+          "screenshots": {
+            "enabled": true,
+            "path": "screenshots/Firefox/"
           },
-         "desiredCapabilities": {
-           "browserName": "firefox",
-           "firefoxOptions": {
-             "args": [
-               "window-size=1680,1200",
-               "start-maximized",
-               "disable-web-security",
-              "ignore-certificate-errors",
-              "--test-type"
+          "desiredCapabilities": {
+            "browserName": "firefox",
+            "firefoxOptions": {
+              "args": [
+                "window-size=1680,1200",
+                "start-maximized",
+                "disable-web-security",
+               "ignore-certificate-errors",
+               "--test-type"
               ]
             }
           }
         },
-    "chrome": {
-     "webdriver":{
-       "server_path": "bin/chromedriver",
-       "port": 9515
+    "chrome" : {
+      "webdriver":{
+        "server_path": "bin/chromedriver",
+        "port": 9515
         },
-     "screenshots": {
-       "enabled": true,
-       "path": "screenshots/Chrome/"
+      "screenshots": {
+        "enabled": true,
+        "path": "screenshots/Chrome/"
       },
-      "desiredCapabilities":{
-       "browserName": "chrome"
+      "desiredCapabilities": {
+        "browserName": "chrome"
       }
     },
-    "safari": {
-     "webdriver": {
-       "server_path": "/usr/bin/safaridriver",
-       "port": 4445,
-       "use_legacy_jsonwire": false
-      },    
-     "screenshots": {
-       "enabled": true,
-       "path": "screenshots/Safari/"
+    "safari" : { 
+      "webdriver": {
+        "server_path": "/usr/bin/safaridriver",
+        "port": 4445,
+        "use_legacy_jsonwire": false
+      },     
+      "screenshots": {
+        "enabled": true,
+        "path": "screenshots/Safari/"
       },
-     "desiredCapabilities": {
-       "browserName": "safari",
-       "javascriptEnabled": true,
-       "acceptSslCerts": true,
-       "platform": "macos 10.14.6",
-        "version":"12.1.2"
+      "desiredCapabilities": {
+        "browserName": "safari",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true,
+        "platform": "macos 10.14.6",
+        "version": "12.1.2"
       }
     },
-    "edge" :{
-     "webdriver":{
-       "server_path": "bin/msedgedriver"
+    "edge" : {
+      "webdriver":{
+        "server_path": "bin/msedgedriver"
         },
-     "screenshots": {
-       "enabled": true,
-       "path": "screenshots/MicrosoftEdge/"
+      "screenshots": {
+        "enabled": true,
+        "path": "screenshots/MicrosoftEdge/"
       },
-     "desiredCapabilities": {
-        "browserName":"MicrosoftEdge"
-
+      "desiredCapabilities": {
+        "browserName": "MicrosoftEdge"
       }
     }
   }

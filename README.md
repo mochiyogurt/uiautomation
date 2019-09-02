@@ -11,7 +11,7 @@ export PATH=$PATH:/usr/local/bin/npm
 5.    Create folder on mac (can be named somethingbesides NightwatchJS) then add folder to workspace in VSCode
 6.    Create folders (bin, log, pages, reports,screenshots, tests)
 7.    Put browser drivers and selenium standaloneserver jars in bin folder
-8.  Createnightwatch.conf.js file
+8.    Create nightwatch.conf.js file
 
 module.exports = (function(settings) {
     settings.test_workers = false;
@@ -19,8 +19,7 @@ module.exports = (function(settings) {
   })(require('./nightwatch.json'));
 
 
-9.Create nightwatch.json file
-
+9.   Create nightwatch.json file
 {
   "src_folders": ["tests"],
   "output_folder": "reports/XMLReports",
@@ -98,8 +97,6 @@ module.exports = (function(settings) {
     }
   }
 }
-
-
 
 10.  OnVSCode terminal : npm init to create package.json file
 11.  OnVSCode : npm install nightwatch –save

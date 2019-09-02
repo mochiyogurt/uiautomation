@@ -1,0 +1,21 @@
+{
+  "name": "uiautomation",
+  "version": "1.0.0",
+  "description": "to learn nightwatch automation testing",
+  "main": "nightwatch.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "author": "mochiyogurt",
+  "license": "ISC",
+  "dependencies": {
+    "nightwatch": "^1.2.1",
+    "nightwatch-html-reporter": "^2.0.6"
+  },
+  "devDependencies": {
+    "chromedriver": "^76.0.0"
+  }
+}

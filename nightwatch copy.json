@@ -1,0 +1,48 @@
+{
+  "src_folders": ["tests"],
+  "output_folder": "reports/XMLReports",
+  "custom_commands_path": "pages",
+  "custom_assertions_path": "",
+  "page_objects_path": "pages",
+  "selenium": {
+    "start_process": true,
+    "server_path": "bin/selenium-server-standalone-3.141.59.jar",
+    "start_session": true,
+    "log_path": "log/",
+    "host": "127.0.0.1",
+    "port": 4444,
+    "cli_args": {
+      "webdriver.gecko.driver": "bin/geckodriver"
+    }
+  },
+  "test_settings" : {
+      "firefox": {
+          "launch_url": "http://www.artsyjewels.com",
+          "selenium_port": 4444,
+          "selenium_host": "127.0.0.1",
+          "silent": true,
+          "screenshots": {
+            "enabled": false,
+            "path": "screenshots/Firefox/"
+          },
+          "desiredCapabilities": {
+            "browserName": "firefox",
+            "firefoxOptions": {
+              "args": [
+                "window-size=1680,1200",
+                "start-maximized",
+                "disable-web-security",
+               "ignore-certificate-errors",
+               "--test-type"
+              ]
+            }
+          }
+        },
+
+    "edge" : {
+      "desiredCapabilities": {
+        "browserName": "MicrosoftEdge"
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="artsyjewels.pomtcs.earringsproductpage"
+    errors="0" failures="0" hostname="" id="" package="pomtcs" skipped="0"
+    tests="1" time="39.89" timestamp="">
+  
+    <testcase name="Test Earrings Product Page" classname="artsyjewels.pomtcs.earringsproductpage" time="39.89" assertions="12">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

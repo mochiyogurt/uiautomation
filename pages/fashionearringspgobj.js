@@ -15,6 +15,21 @@ selectSecondProductCMD = {
         //browser.pause(1000)
         var productssection = fashionearringspgobj.section.products;
         productssection.pause(5000)
+        //if use xpath
+        productssection.waitForElementVisible({selector: '@fashionearringsIMG2', index: 1}, 1000)
+        var x;
+        var y;
+        var fashionearringsIMG2selectortext = fashionearringspgobj.section.products.elements.fashionearringsIMG2.selector;
+        browser.useXpath().getLocation({selector: fashionearringsIMG2selectortext, index: 1}, function(result){
+            x = Math.round(result.value.x);
+            y = Math.round(result.value.y);
+        });
+        browser.useXpath().moveToElement({selector: fashionearringsIMG2selectortext, index: 1},x,y).mouseButtonClick(0)      
+        browser.pause(5000);
+
+
+
+         /*** //if use css
         var fashionearringsIMG2selectortext = fashionearringspgobj.section.products.elements.fashionearringsIMG2.selector;
         productssection.waitForElementVisible(fashionearringsIMG2selectortext, 1000)
         var x;
@@ -23,8 +38,10 @@ selectSecondProductCMD = {
             x = Math.round(result.value.x);
             y = Math.round(result.value.y);
         });
-        browser.moveToElement(fashionearringsIMG2selectortext,x,y).mouseButtonClick(0)        
+        browser.moveToElement(fashionearringsIMG2selectortext,x,y).mouseButtonClick(0)      
         browser.pause(5000);
+        ***/
+
     }
 };
 
@@ -43,10 +60,15 @@ module.exports = {
             }
         },
         products: {
-            selector: 'div.jas-row',
+            //selector: 'div.jas-row',
+            selector: './/div[@class="products jas-products-holder jas-row jas_pr_tc masonry jas_cover jas-masonry ratio1_1 position_8 equal-nt"]',
+            locateStrategy: 'xpath',
             elements: {
                 fashionearringsIMG2: {
-                    selector: 'div.jas-grid-item.jas-col-md-3.jas-col-sm-4.jas-col-xs-6.mt__30.product.has-post-thumbnail.user_custom:nth-of-type(2)>div>div.jas-product-image.pr.oh.jas-product-image-equal>a'
+                    //selector: 'div.jas-grid-item.jas-col-md-3.jas-col-sm-4.jas-col-xs-6.mt__30.product.has-post-thumbnail.user_custom:nth-of-type(2)>div>div.jas-product-image.pr.oh.jas-product-image-equal>a'
+                      selector: './/div[@class="jas-grid-item jas-col-md-3 jas-col-sm-4 jas-col-xs-6 mt__30 product has-post-thumbnail user_custom"]/div/div[@class="jas-product-image pr oh jas-product-image-equal"]/a',
+                      index: 1,
+                      locateStrategy: 'xpath'
                 }
             }
         }

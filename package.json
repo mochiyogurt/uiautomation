@@ -12,7 +12,7 @@
   "author": "mochiyogurt",
   "license": "ISC",
   "dependencies": {
-    "nightwatch": "^1.2.1",
+    "nightwatch": "^1.7.13",
     "nightwatch-html-reporter": "^2.0.6"
   },
   "devDependencies": {
